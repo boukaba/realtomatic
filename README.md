@@ -10,8 +10,6 @@ Designed for the US real estate market, adaptable to Europe and Asia.
 
 `Working web app` · `Next.js 16` · `React 19` · `TypeScript` · `OpenCode` · `SQLite`
 
-Built for **Thirduni Cohort 1, October 2026**.
-
 ![Realtomatic operator dashboard](docs/screenshot.png)
 
 *The operator view: live agent status, the work queue, and the human approval surface. The data is a synthetic demo portfolio; the agents and approvals are real.*
@@ -247,8 +245,6 @@ For this product, the custom orchestrator is the right trade-off: one working, r
 - A coding assistant was used for implementation and debugging. Design decisions, product behaviour, and verification are mine; I can walk through every module and trade-off.
 - No other team members.
 - Project origin: the product code in this repository was developed for the Thirduni Cohort 1 submission. The repository begins from a Create Next App scaffold; no earlier product code was reused.
-
-Built for **Thirduni Cohort 1, October 2026**.
 
 ## Demo and submission
 
