@@ -266,7 +266,7 @@ The local steps above reproduce the same product. The demo runs against a synthe
 
 ## What happens next
 
-Over the next three months I would add insurance, tax, ESG, and capital-markets agents, then connect them into one property operations graph so a single event, such as a lease expiry or a failing HVAC unit, can move across agents without a human re-entering context. I would harden the audit trail and approval gates, add portfolio reporting, and localize document and compliance models for the US first, then Europe and Asia. The goal is a system that runs the repetitive work of a property portfolio and leaves people to make the consequential calls.
+Over the next three months I would add insurance, tax, ESG, and capital-markets agents, then connect them into one property operations graph so a lease expiry or failing HVAC unit can move across agents without a human re-entering context. I would harden the audit trail and approval gates, add portfolio reporting, and localize document and compliance models for the US, Europe, and Asia. To make it production-ready for high throughput, I would move state and audit data to PostgreSQL, add Neo4j for retrieval-augmented generation, and introduce Redis-backed queues and horizontally scaled workers.
 
 ## Known gaps
 
