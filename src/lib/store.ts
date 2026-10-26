@@ -100,6 +100,24 @@ export type ApprovalRecord = {
   resolvedAt: string | null;
   resolvedBy: string | null;
   priority: 'low' | 'medium' | 'high' | 'critical';
+  /** Thread that owns this work item, so a decision closes the same trail. */
+  threadId?: string;
+};
+
+export type HistoricalWorkflowStepOverride = {
+  status: 'completed' | 'failed';
+  completedAt: string;
+  output?: string | null;
+  confidence?: number | null;
+  duration?: number | null;
+};
+
+export type HistoricalWorkflowOverride = {
+  status: 'completed' | 'failed';
+  completedAt: string;
+  resolvedAt: string;
+  resolvedBy: string;
+  steps: Record<string, HistoricalWorkflowStepOverride>;
 };
 
 export type FabricatorState = {
@@ -140,6 +158,8 @@ export type DemoState = {
   resolutions: Resolution[];
   /** Agent-to-agent handoffs — evidence of autonomous collaboration. */
   consults: ConsultRecord[];
+  /** Persisted decisions on seeded historical workflow examples. */
+  historicalWorkflowOverrides: Record<string, HistoricalWorkflowOverride>;
 };
 
 let cache: DemoState | null = null;
@@ -161,6 +181,7 @@ function emptyState(): DemoState {
     activity: [],
     resolutions: [],
     consults: [],
+    historicalWorkflowOverrides: {},
   };
 }
 
@@ -172,6 +193,9 @@ function loadFromDisk(): DemoState {
         // Backfill fields added after a state file was first written.
         if (!Array.isArray(parsed.resolutions)) parsed.resolutions = [];
         if (!Array.isArray(parsed.consults)) parsed.consults = [];
+        if (!parsed.historicalWorkflowOverrides || typeof parsed.historicalWorkflowOverrides !== 'object') {
+          parsed.historicalWorkflowOverrides = {};
+        }
         if (!parsed.fabricator) parsed.fabricator = emptyState().fabricator;
         // A crash mid-run should not leave phantom "running" state.
         parsed.executions = parsed.executions.map((e) =>

@@ -30,7 +30,7 @@ type AttentionItem = {
  * Both are "HITL"; keeping them in separate places made the queue look empty
  * while the dashboard showed a backlog.
  */
-export async function GET() {
+export async function GET(request: Request) {
   ensureFabricator();
 
   const state = getState();
@@ -39,7 +39,11 @@ export async function GET() {
   // Derive review items from the same source the dashboard uses.
   let reviews: AttentionItem[] = [];
   try {
-    const base = process.env.NEXT_PUBLIC_BASE_URL || 'http://127.0.0.1:3000';
+    const forwardedHost = request.headers.get('x-forwarded-host');
+    const forwardedProto = request.headers.get('x-forwarded-proto') || 'http';
+    const base =
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (forwardedHost ? `${forwardedProto}://${forwardedHost}` : new URL(request.url).origin);
     const res = await fetch(`${base}/api/attention`, { cache: 'no-store' });
     if (res.ok) {
       const body = (await res.json()) as { items?: AttentionItem[] };

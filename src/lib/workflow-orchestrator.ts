@@ -245,6 +245,11 @@ function requestApproval(
       meta: { approvalId: approval.id, workflowId: workflow.id },
     });
     setThreadStatus(threadId, 'awaiting_human');
+    approval.threadId = threadId;
+    mutateState((s) => {
+      const stored = s.approvals.find((a) => a.id === approval.id);
+      if (stored) stored.threadId = threadId;
+    });
   } catch {
     // Thread logging must never block a workflow.
   }
@@ -281,7 +286,7 @@ async function runWorkflow(workflow: LiveWorkflow): Promise<void> {
       const { artifact, confidence } = await runStep(current, step, carryArtifact);
       carryArtifact = artifact ?? carryArtifact;
 
-      if (confidence < APPROVAL_THRESHOLD && i < template.steps.length - 1) {
+      if (confidence < APPROVAL_THRESHOLD) {
         requestApproval(current, step, confidence, carryArtifact);
         mutateState((s) => {
           const wf = s.workflows.find((w) => w.id === workflow.id);
@@ -410,11 +415,13 @@ export function resolveApproval(approvalId: string, decision: 'approved' | 'reje
 
   // Thread record: the human's decision, closing the loop on the paused work.
   try {
-    const threadId = ensureThread({
-      artifactId: approval.workflowId ? `wf-${approval.workflowId}-${approval.stepId}` : approval.id,
-      title: `${approval.agentName} — review`,
-      topic: approval.agentName,
-    });
+    const threadId =
+      approval.threadId ??
+      ensureThread({
+        artifactId: approval.workflowId ? `wf-${approval.workflowId}-${approval.stepId}` : approval.id,
+        title: `${approval.agentName} — review`,
+        topic: approval.agentName,
+      });
     const verdict =
       decision === 'approved'
         ? 'Approved — proceed.'

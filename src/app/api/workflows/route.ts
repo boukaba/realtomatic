@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import { getState, type LiveWorkflow } from '@/lib/store';
 import { startWorkflow, workflowTemplates } from '@/lib/workflow-orchestrator';
 import { ensureFabricator } from '@/lib/fabricator';
-import { workflows as historicalWorkflows } from '@/lib/mock-data';
+import { listHistoricalWorkflows } from '@/lib/historical-workflows';
+import type { Workflow } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
@@ -63,7 +64,7 @@ function liveToView(w: LiveWorkflow): WorkflowView {
   };
 }
 
-function historicalToView(w: (typeof historicalWorkflows)[number]): WorkflowView {
+function historicalToView(w: Workflow): WorkflowView {
   return {
     id: w.id,
     name: w.name,
@@ -91,9 +92,12 @@ function historicalToView(w: (typeof historicalWorkflows)[number]): WorkflowView
 export async function GET() {
   ensureFabricator();
   const state = getState();
+  const liveIds = new Set(state.workflows.map((w) => w.id));
   const runs: WorkflowView[] = [
     ...state.workflows.slice().reverse().map(liveToView),
-    ...historicalWorkflows.map(historicalToView),
+    ...listHistoricalWorkflows()
+      .filter((w) => !liveIds.has(w.id))
+      .map(historicalToView),
   ].sort((a, b) => Date.parse(b.startedAt) - Date.parse(a.startedAt));
 
   return NextResponse.json({

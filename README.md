@@ -12,7 +12,7 @@ Designed for the US real estate market, adaptable to Europe and Asia.
 
 ![Realtomatic operator dashboard](docs/screenshot.png)
 
-*The operator view: live agent status, the work queue, and the human approval surface. The data is a synthetic demo portfolio; the agents and approvals are real.*
+*The operator view: live agent status, the work queue, and the human approval surface. The portfolio is synthetic; the live agent runs and approval gates are real, while the seeded history is illustrative.*
 
 ---
 
@@ -180,6 +180,10 @@ There is no automated test suite yet. The verification above checks the working 
 **Real:** the web application, the agent orchestration, live model inference, streamed reasoning, agent-to-agent consults, human approval gates, workflow pause/resume, and the SQLite thread audit trail.
 
 **Simulated:** the property, lease, tenant, and lead catalog. Atlas synthesizes market snapshots, lease documents, tenant emails, and inbound leads with a live model. There is no PMS, MLS, email, or accounting integration, and no real tenant data.
+
+**Seeded examples:** the five workflows in the Workflows list are realistic history, not live agent runs. Approve, Reject, and Retry on those examples persist in the demo workspace so the UI and API agree. Launch a workflow to exercise the live orchestrator.
+
+**Illustrative UI:** the VM, CPU, and resource figures shown on the workflow detail page are example values for the operator interface, not measured infrastructure telemetry.
 
 **Not production-ready:** the public demo has no authentication, tenant isolation, rate limiting, or billing. It is a working product demonstration, not a production deployment. Every number on the dashboard belongs to the demo portfolio.
 

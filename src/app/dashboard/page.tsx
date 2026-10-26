@@ -288,7 +288,7 @@ function AgentCard({ agent }: { agent: Agent }) {
 function workflowDurationMs(workflow: Workflow): number {
   const start = new Date(workflow.startedAt).getTime();
   const end = workflow.completedAt ? new Date(workflow.completedAt).getTime() : Date.now();
-  return end - start;
+  return Math.max(0, end - start);
 }
 
 // False during SSR / first client render, true after hydration — lets us

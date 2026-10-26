@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { format, formatDistanceToNow } from 'date-fns';
@@ -352,7 +352,7 @@ function buildAuditTrail(workflow: Workflow): AuditEvent[] {
         icon: XCircle,
         iconClass: 'bg-red-500/15 text-red-400',
         actor: step.agentName,
-        message: `Step "${step.name}" failed — upstream timeout`,
+        message: `Step "${step.name}" failed — ${step.output ?? 'upstream timeout'}`,
       });
     }
     if (step.status === 'awaiting_approval') {
@@ -367,12 +367,13 @@ function buildAuditTrail(workflow: Workflow): AuditEvent[] {
   }
 
   if (workflow.completedAt) {
+    const failed = workflow.status === 'failed';
     events.push({
       time: workflow.completedAt,
-      icon: GitBranch,
-      iconClass: 'bg-emerald-500/15 text-emerald-400',
+      icon: failed ? XCircle : GitBranch,
+      iconClass: failed ? 'bg-red-500/15 text-red-400' : 'bg-emerald-500/15 text-emerald-400',
       actor: 'System',
-      message: 'Workflow completed successfully',
+      message: failed ? 'Workflow failed' : 'Workflow completed successfully',
     });
   }
 
@@ -1066,6 +1067,24 @@ function WorkflowLogsDialog({ workflow, onClose }: { workflow: Workflow; onClose
   );
 }
 
+function normalizeWorkflow(raw: Workflow): Workflow {
+  return {
+    ...raw,
+    steps: raw.steps.map((step) => {
+      const computed =
+        step.startedAt && step.completedAt
+          ? Math.max(
+              0,
+              Math.round(
+                (Date.parse(step.completedAt) - Date.parse(step.startedAt)) / 1000
+              )
+            )
+          : null;
+      return { ...step, duration: step.duration ?? computed };
+    }),
+  };
+}
+
 export default function WorkflowDetailPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
@@ -1074,6 +1093,8 @@ export default function WorkflowDetailPage() {
   const [workflow, setWorkflow] = useState<Workflow | null>(() =>
     workflows.find((w) => w.id === rawId) ?? null
   );
+  const [isLive, setIsLive] = useState(false);
+  const [acting, setActing] = useState(false);
   const [selectedStepId, setSelectedStepId] = useState<string | null>(null);
   const [logsOpen, setLogsOpen] = useState(false);
   const [now, setNow] = useState(() => Date.now());
@@ -1083,49 +1104,30 @@ export default function WorkflowDetailPage() {
     return () => clearInterval(interval);
   }, []);
 
+  const reload = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/workflows/${rawId}`, { cache: 'no-store' });
+      if (!res.ok) return;
+      const body = (await res.json()) as { workflow?: Workflow; live?: boolean };
+      if (body.workflow) {
+        setWorkflow(normalizeWorkflow(body.workflow));
+        setIsLive(Boolean(body.live));
+      }
+    } catch {
+      // Keep the last known workflow; the polling retry will reconcile.
+    }
+  }, [rawId]);
+
   useEffect(() => {
-    if (!workflow) return;
-    const runningStep = workflow.steps.find((s) => s.status === 'running');
-    if (!runningStep) return;
+    const first = setTimeout(() => void reload(), 0);
+    return () => clearTimeout(first);
+  }, [reload]);
 
-    const timeout = setTimeout(() => {
-      setWorkflow((prev) => {
-        if (!prev) return prev;
-        const idx = prev.steps.findIndex((s) => s.id === runningStep.id && s.status === 'running');
-        if (idx === -1) return prev;
-        const completedAt = new Date().toISOString();
-        const duration = runningStep.startedAt
-          ? Math.max(1, Math.round((Date.now() - new Date(runningStep.startedAt).getTime()) / 1000))
-          : 5;
-        const confidence = Math.round((0.86 + (hashString(runningStep.id) % 12) / 100) * 100) / 100;
-        const steps = prev.steps.map((s, i) => {
-          if (i === idx) {
-            return {
-              ...s,
-              status: 'completed' as const,
-              completedAt,
-              duration,
-              output: `${s.input} → processed successfully`,
-              confidence,
-            };
-          }
-          if (i === idx + 1 && s.status === 'pending') {
-            return { ...s, status: 'running' as const, startedAt: completedAt };
-          }
-          return s;
-        });
-        const allDone = steps.every((s) => s.status === 'completed');
-        return {
-          ...prev,
-          status: allDone ? ('completed' as const) : ('running' as const),
-          completedAt: allDone ? completedAt : null,
-          steps,
-        };
-      });
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }, [workflow]);
+  useEffect(() => {
+    if (!isLive) return;
+    const interval = setInterval(() => void reload(), 4000);
+    return () => clearInterval(interval);
+  }, [isLive, reload]);
 
   const selectedStep = workflow?.steps.find((s) => s.id === selectedStepId) ?? null;
 
@@ -1138,8 +1140,11 @@ export default function WorkflowDetailPage() {
   const totalDuration = useMemo(() => {
     if (!workflow) return 0;
     if (workflow.status === 'completed' && workflow.completedAt) {
-      return Math.round(
-        (new Date(workflow.completedAt).getTime() - new Date(workflow.startedAt).getTime()) / 1000
+      return Math.max(
+        0,
+        Math.round(
+          (new Date(workflow.completedAt).getTime() - new Date(workflow.startedAt).getTime()) / 1000
+        )
       );
     }
     const lastFinished = [...workflow.steps].reverse().find((s) => s.completedAt);
@@ -1177,96 +1182,32 @@ export default function WorkflowDetailPage() {
       ? 'System (Scheduled)'
       : workflow.triggeredBy.replace('user:', '');
 
-  const advanceFromStep = (stepId: string) => {
-    setWorkflow((prev) => {
-      if (!prev) return prev;
-      const idx = prev.steps.findIndex((s) => s.id === stepId);
-      if (idx === -1) return prev;
-      const nowIso = new Date().toISOString();
-      const steps = prev.steps.map((s, i) => {
-        if (i === idx) {
-          return { ...s, status: 'running' as const, startedAt: nowIso, completedAt: null, duration: null };
-        }
-        if (i === idx + 1 && s.status === 'pending') {
-          return { ...s, status: 'pending' as const };
-        }
-        return s;
+  const handleDecision = async (
+    stepId: string,
+    decision: 'approved' | 'rejected' | 'changes_requested' | 'retried'
+  ) => {
+    if (!workflow) return;
+    setActing(true);
+    try {
+      const res = await fetch(`/api/workflows/${workflow.id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ decision, stepId, resolvedBy: 'you' }),
       });
-      return { ...prev, status: 'running' as const, completedAt: null, steps };
-    });
-  };
-
-  const completeRunningStep = (stepId: string) => {
-    setWorkflow((prev) => {
-      if (!prev) return prev;
-      const idx = prev.steps.findIndex((s) => s.id === stepId);
-      if (idx === -1) return prev;
-      const completedAt = new Date().toISOString();
-      const step = prev.steps[idx];
-      const duration = step.startedAt
-        ? Math.max(1, Math.round((Date.now() - new Date(step.startedAt).getTime()) / 1000))
-        : 5;
-      const confidence = Math.round((0.86 + (hashString(step.id) % 12) / 100) * 100) / 100;
-      const steps = prev.steps.map((s, i) => {
-        if (i === idx) {
-          return {
-            ...s,
-            status: 'completed' as const,
-            completedAt,
-            duration,
-            output: s.output ?? `${s.input} → processed successfully`,
-            confidence,
-          };
-        }
-        if (i === idx + 1 && s.status === 'pending') {
-          return { ...s, status: 'running' as const, startedAt: completedAt };
-        }
-        return s;
-      });
-      const allDone = steps.every((s) => s.status === 'completed');
-      return {
-        ...prev,
-        status: allDone ? ('completed' as const) : ('running' as const),
-        completedAt: allDone ? completedAt : null,
-        steps,
-      };
-    });
-  };
-
-  const handleRetryStep = (stepId: string) => {
-    advanceFromStep(stepId);
-    setTimeout(() => completeRunningStep(stepId), 4000);
+      if (res.ok) await reload();
+    } catch {
+      // Keep the current view; polling or a manual retry will reconcile.
+    } finally {
+      setActing(false);
+    }
   };
 
   const handleApproveStep = (stepId: string) => {
-    setWorkflow((prev) => {
-      if (!prev) return prev;
-      const idx = prev.steps.findIndex((s) => s.id === stepId);
-      if (idx === -1) return prev;
-      const completedAt = new Date().toISOString();
-      const steps = prev.steps.map((s, i) => {
-        if (i === idx) {
-          return {
-            ...s,
-            status: 'completed' as const,
-            completedAt,
-            duration: s.duration ?? 8,
-            output: s.output ?? 'Approved by sarah.chen@realtomatic.ai',
-          };
-        }
-        if (i === idx + 1 && s.status === 'pending') {
-          return { ...s, status: 'running' as const, startedAt: completedAt };
-        }
-        return s;
-      });
-      const allDone = steps.every((s) => s.status === 'completed');
-      return {
-        ...prev,
-        status: allDone ? ('completed' as const) : ('running' as const),
-        completedAt: allDone ? completedAt : null,
-        steps,
-      };
-    });
+    void handleDecision(stepId, 'approved');
+  };
+
+  const handleRetryStep = (stepId: string) => {
+    void handleDecision(stepId, 'retried');
   };
 
   const handleExportReport = () => {
@@ -1384,6 +1325,7 @@ export default function WorkflowDetailPage() {
                       const failed = workflow.steps.find((s) => s.status === 'failed');
                       if (failed) handleRetryStep(failed.id);
                     }}
+                    disabled={acting}
                     className="bg-red-600 text-white hover:bg-red-700"
                   >
                     <RotateCcw className="h-4 w-4" />
@@ -1391,16 +1333,31 @@ export default function WorkflowDetailPage() {
                   </Button>
                 )}
                 {workflow.status === 'pending_approval' && (
-                  <Button
-                    onClick={() => {
-                      const awaiting = workflow.steps.find((s) => s.status === 'awaiting_approval');
-                      if (awaiting) handleApproveStep(awaiting.id);
-                    }}
-                    className="bg-emerald-600 text-white hover:bg-emerald-700"
-                  >
-                    <CheckCheck className="h-4 w-4" />
-                    Approve
-                  </Button>
+                  <>
+                    <Button
+                      onClick={() => {
+                        const awaiting = workflow.steps.find((s) => s.status === 'awaiting_approval');
+                        if (awaiting) handleApproveStep(awaiting.id);
+                      }}
+                      disabled={acting}
+                      className="bg-emerald-600 text-white hover:bg-emerald-700"
+                    >
+                      {acting ? <Loader2 className="h-4 w-4 animate-spin" /> : <CheckCheck className="h-4 w-4" />}
+                      Approve
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      disabled={acting}
+                      onClick={() => {
+                        const awaiting = workflow.steps.find((s) => s.status === 'awaiting_approval');
+                        if (awaiting) void handleDecision(awaiting.id, 'rejected');
+                      }}
+                      className="text-red-400 hover:bg-red-500/10 hover:text-red-300"
+                    >
+                      <XCircle className="h-4 w-4" />
+                      Reject
+                    </Button>
+                  </>
                 )}
                 <Button
                   variant="outline"
