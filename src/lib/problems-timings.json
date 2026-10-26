@@ -1,0 +1,1887 @@
+[
+  {
+    "slide_id": "open",
+    "duration": 12.32,
+    "word_timings": [
+      {
+        "word": "Real",
+        "start": 0.18,
+        "end": 0.51
+      },
+      {
+        "word": "estate",
+        "start": 0.51,
+        "end": 1.17
+      },
+      {
+        "word": "now",
+        "start": 1.17,
+        "end": 1.5
+      },
+      {
+        "word": "has",
+        "start": 1.5,
+        "end": 1.83
+      },
+      {
+        "word": "good",
+        "start": 1.83,
+        "end": 2.16
+      },
+      {
+        "word": "AI",
+        "start": 2.16,
+        "end": 2.49
+      },
+      {
+        "word": "tools.",
+        "start": 2.49,
+        "end": 2.82
+      },
+      {
+        "word": "What",
+        "start": 3.24,
+        "end": 3.486
+      },
+      {
+        "word": "it",
+        "start": 3.486,
+        "end": 3.731
+      },
+      {
+        "word": "does",
+        "start": 3.731,
+        "end": 3.977
+      },
+      {
+        "word": "not",
+        "start": 3.977,
+        "end": 4.223
+      },
+      {
+        "word": "have",
+        "start": 4.223,
+        "end": 4.469
+      },
+      {
+        "word": "is",
+        "start": 4.469,
+        "end": 4.714
+      },
+      {
+        "word": "the",
+        "start": 4.714,
+        "end": 4.96
+      },
+      {
+        "word": "foundation",
+        "start": 4.96,
+        "end": 5.697
+      },
+      {
+        "word": "underneath",
+        "start": 5.697,
+        "end": 6.434
+      },
+      {
+        "word": "them.",
+        "start": 6.434,
+        "end": 6.68
+      },
+      {
+        "word": "Three",
+        "start": 7.1,
+        "end": 7.46
+      },
+      {
+        "word": "problems",
+        "start": 7.46,
+        "end": 8.18
+      },
+      {
+        "word": "worth",
+        "start": 8.18,
+        "end": 8.54
+      },
+      {
+        "word": "solving.",
+        "start": 8.54,
+        "end": 9.26
+      },
+      {
+        "word": "Every",
+        "start": 9.68,
+        "end": 10.211
+      },
+      {
+        "word": "tool",
+        "start": 10.211,
+        "end": 10.389
+      },
+      {
+        "word": "in",
+        "start": 10.389,
+        "end": 10.566
+      },
+      {
+        "word": "this",
+        "start": 10.566,
+        "end": 10.743
+      },
+      {
+        "word": "space",
+        "start": 10.743,
+        "end": 10.92
+      },
+      {
+        "word": "solves",
+        "start": 10.92,
+        "end": 11.274
+      },
+      {
+        "word": "at",
+        "start": 11.274,
+        "end": 11.451
+      },
+      {
+        "word": "most",
+        "start": 11.451,
+        "end": 11.629
+      },
+      {
+        "word": "one",
+        "start": 11.629,
+        "end": 11.806
+      },
+      {
+        "word": "of",
+        "start": 11.806,
+        "end": 11.983
+      },
+      {
+        "word": "them.",
+        "start": 11.983,
+        "end": 12.16
+      }
+    ]
+  },
+  {
+    "slide_id": "p1",
+    "duration": 46.38,
+    "word_timings": [
+      {
+        "word": "Problem",
+        "start": 0.18,
+        "end": 0.927
+      },
+      {
+        "word": "one.",
+        "start": 0.927,
+        "end": 1.3
+      },
+      {
+        "word": "Autonomous",
+        "start": 1.72,
+        "end": 2.629
+      },
+      {
+        "word": "agents",
+        "start": 2.629,
+        "end": 3.084
+      },
+      {
+        "word": "cannot",
+        "start": 3.084,
+        "end": 3.539
+      },
+      {
+        "word": "be",
+        "start": 3.539,
+        "end": 3.766
+      },
+      {
+        "word": "legally",
+        "start": 3.766,
+        "end": 4.448
+      },
+      {
+        "word": "put",
+        "start": 4.448,
+        "end": 4.676
+      },
+      {
+        "word": "near",
+        "start": 4.676,
+        "end": 4.903
+      },
+      {
+        "word": "real",
+        "start": 4.903,
+        "end": 5.131
+      },
+      {
+        "word": "estate",
+        "start": 5.131,
+        "end": 5.585
+      },
+      {
+        "word": "data.",
+        "start": 5.585,
+        "end": 6.04
+      },
+      {
+        "word": "Portfolios",
+        "start": 6.46,
+        "end": 7.169
+      },
+      {
+        "word": "hold",
+        "start": 7.169,
+        "end": 7.405
+      },
+      {
+        "word": "the",
+        "start": 7.405,
+        "end": 7.641
+      },
+      {
+        "word": "most",
+        "start": 7.641,
+        "end": 7.877
+      },
+      {
+        "word": "regulated",
+        "start": 7.877,
+        "end": 8.822
+      },
+      {
+        "word": "data",
+        "start": 8.822,
+        "end": 9.294
+      },
+      {
+        "word": "in",
+        "start": 9.294,
+        "end": 9.53
+      },
+      {
+        "word": "a",
+        "start": 9.53,
+        "end": 9.767
+      },
+      {
+        "word": "consumer",
+        "start": 9.767,
+        "end": 10.475
+      },
+      {
+        "word": "economy.",
+        "start": 10.475,
+        "end": 11.42
+      },
+      {
+        "word": "Gramm-Leach-Bliley",
+        "start": 11.84,
+        "end": 12.96
+      },
+      {
+        "word": "mandates",
+        "start": 12.96,
+        "end": 13.8
+      },
+      {
+        "word": "security",
+        "start": 13.8,
+        "end": 14.92
+      },
+      {
+        "word": "protocols.",
+        "start": 14.92,
+        "end": 15.76
+      },
+      {
+        "word": "The",
+        "start": 16.18,
+        "end": 16.404
+      },
+      {
+        "word": "FTC",
+        "start": 16.404,
+        "end": 16.628
+      },
+      {
+        "word": "Safeguards",
+        "start": 16.628,
+        "end": 17.3
+      },
+      {
+        "word": "Rule",
+        "start": 17.3,
+        "end": 17.524
+      },
+      {
+        "word": "requires",
+        "start": 17.524,
+        "end": 18.196
+      },
+      {
+        "word": "a",
+        "start": 18.196,
+        "end": 18.42
+      },
+      {
+        "word": "formal",
+        "start": 18.42,
+        "end": 18.868
+      },
+      {
+        "word": "written",
+        "start": 18.868,
+        "end": 19.316
+      },
+      {
+        "word": "security",
+        "start": 19.316,
+        "end": 20.212
+      },
+      {
+        "word": "program.",
+        "start": 20.212,
+        "end": 20.66
+      },
+      {
+        "word": "Over",
+        "start": 21.08,
+        "end": 21.532
+      },
+      {
+        "word": "a",
+        "start": 21.532,
+        "end": 21.758
+      },
+      {
+        "word": "dozen",
+        "start": 21.758,
+        "end": 22.21
+      },
+      {
+        "word": "states",
+        "start": 22.21,
+        "end": 22.663
+      },
+      {
+        "word": "grant",
+        "start": 22.663,
+        "end": 22.889
+      },
+      {
+        "word": "consumers",
+        "start": 22.889,
+        "end": 23.567
+      },
+      {
+        "word": "the",
+        "start": 23.567,
+        "end": 23.793
+      },
+      {
+        "word": "right",
+        "start": 23.793,
+        "end": 24.019
+      },
+      {
+        "word": "to",
+        "start": 24.019,
+        "end": 24.245
+      },
+      {
+        "word": "access,",
+        "start": 24.245,
+        "end": 24.697
+      },
+      {
+        "word": "correct,",
+        "start": 24.697,
+        "end": 25.15
+      },
+      {
+        "word": "delete,",
+        "start": 25.15,
+        "end": 25.602
+      },
+      {
+        "word": "and",
+        "start": 25.602,
+        "end": 25.828
+      },
+      {
+        "word": "opt",
+        "start": 25.828,
+        "end": 26.054
+      },
+      {
+        "word": "out.",
+        "start": 26.054,
+        "end": 26.28
+      },
+      {
+        "word": "Public",
+        "start": 26.7,
+        "end": 27.127
+      },
+      {
+        "word": "records",
+        "start": 27.127,
+        "end": 27.553
+      },
+      {
+        "word": "are",
+        "start": 27.553,
+        "end": 27.767
+      },
+      {
+        "word": "often",
+        "start": 27.767,
+        "end": 28.193
+      },
+      {
+        "word": "exempt.",
+        "start": 28.193,
+        "end": 28.62
+      },
+      {
+        "word": "Everything",
+        "start": 29.04,
+        "end": 29.902
+      },
+      {
+        "word": "gathered",
+        "start": 29.902,
+        "end": 30.548
+      },
+      {
+        "word": "actively",
+        "start": 30.548,
+        "end": 31.409
+      },
+      {
+        "word": "is",
+        "start": 31.409,
+        "end": 31.625
+      },
+      {
+        "word": "not.",
+        "start": 31.625,
+        "end": 31.84
+      },
+      {
+        "word": "So",
+        "start": 32.26,
+        "end": 32.535
+      },
+      {
+        "word": "enterprises",
+        "start": 32.535,
+        "end": 33.635
+      },
+      {
+        "word": "are",
+        "start": 33.635,
+        "end": 33.91
+      },
+      {
+        "word": "stuck",
+        "start": 33.91,
+        "end": 34.185
+      },
+      {
+        "word": "at",
+        "start": 34.185,
+        "end": 34.46
+      },
+      {
+        "word": "AI",
+        "start": 34.46,
+        "end": 34.735
+      },
+      {
+        "word": "drafts,",
+        "start": 34.735,
+        "end": 35.01
+      },
+      {
+        "word": "a",
+        "start": 35.01,
+        "end": 35.285
+      },
+      {
+        "word": "human",
+        "start": 35.285,
+        "end": 35.835
+      },
+      {
+        "word": "verifies.",
+        "start": 35.835,
+        "end": 36.66
+      },
+      {
+        "word": "Not",
+        "start": 37.08,
+        "end": 37.34
+      },
+      {
+        "word": "because",
+        "start": 37.34,
+        "end": 37.86
+      },
+      {
+        "word": "the",
+        "start": 37.86,
+        "end": 38.12
+      },
+      {
+        "word": "models",
+        "start": 38.12,
+        "end": 38.64
+      },
+      {
+        "word": "are",
+        "start": 38.64,
+        "end": 38.9
+      },
+      {
+        "word": "weak.",
+        "start": 38.9,
+        "end": 39.16
+      },
+      {
+        "word": "Because",
+        "start": 39.58,
+        "end": 39.971
+      },
+      {
+        "word": "nobody",
+        "start": 39.971,
+        "end": 40.556
+      },
+      {
+        "word": "built",
+        "start": 40.556,
+        "end": 40.752
+      },
+      {
+        "word": "a",
+        "start": 40.752,
+        "end": 40.947
+      },
+      {
+        "word": "way",
+        "start": 40.947,
+        "end": 41.142
+      },
+      {
+        "word": "to",
+        "start": 41.142,
+        "end": 41.338
+      },
+      {
+        "word": "hand",
+        "start": 41.338,
+        "end": 41.533
+      },
+      {
+        "word": "an",
+        "start": 41.533,
+        "end": 41.728
+      },
+      {
+        "word": "autonomous",
+        "start": 41.728,
+        "end": 42.509
+      },
+      {
+        "word": "agent",
+        "start": 42.509,
+        "end": 42.9
+      },
+      {
+        "word": "production",
+        "start": 42.9,
+        "end": 43.486
+      },
+      {
+        "word": "data",
+        "start": 43.486,
+        "end": 43.876
+      },
+      {
+        "word": "without",
+        "start": 43.876,
+        "end": 44.267
+      },
+      {
+        "word": "inheriting",
+        "start": 44.267,
+        "end": 45.048
+      },
+      {
+        "word": "unbounded",
+        "start": 45.048,
+        "end": 45.634
+      },
+      {
+        "word": "blast",
+        "start": 45.634,
+        "end": 45.829
+      },
+      {
+        "word": "radius.",
+        "start": 45.829,
+        "end": 46.22
+      }
+    ]
+  },
+  {
+    "slide_id": "p2",
+    "duration": 46.86,
+    "word_timings": [
+      {
+        "word": "Problem",
+        "start": 0.18,
+        "end": 0.82
+      },
+      {
+        "word": "two.",
+        "start": 0.82,
+        "end": 1.14
+      },
+      {
+        "word": "The",
+        "start": 1.56,
+        "end": 1.818
+      },
+      {
+        "word": "industry",
+        "start": 1.818,
+        "end": 2.591
+      },
+      {
+        "word": "got",
+        "start": 2.591,
+        "end": 2.849
+      },
+      {
+        "word": "AI",
+        "start": 2.849,
+        "end": 3.107
+      },
+      {
+        "word": "tools",
+        "start": 3.107,
+        "end": 3.364
+      },
+      {
+        "word": "before",
+        "start": 3.364,
+        "end": 3.88
+      },
+      {
+        "word": "it",
+        "start": 3.88,
+        "end": 4.138
+      },
+      {
+        "word": "got",
+        "start": 4.138,
+        "end": 4.396
+      },
+      {
+        "word": "trustworthy",
+        "start": 4.396,
+        "end": 5.169
+      },
+      {
+        "word": "arithmetic.",
+        "start": 5.169,
+        "end": 6.2
+      },
+      {
+        "word": "Every",
+        "start": 6.62,
+        "end": 7.191
+      },
+      {
+        "word": "decision",
+        "start": 7.191,
+        "end": 7.763
+      },
+      {
+        "word": "in",
+        "start": 7.763,
+        "end": 7.953
+      },
+      {
+        "word": "real",
+        "start": 7.953,
+        "end": 8.144
+      },
+      {
+        "word": "estate",
+        "start": 8.144,
+        "end": 8.525
+      },
+      {
+        "word": "is",
+        "start": 8.525,
+        "end": 8.715
+      },
+      {
+        "word": "a",
+        "start": 8.715,
+        "end": 8.906
+      },
+      {
+        "word": "calculation",
+        "start": 8.906,
+        "end": 9.668
+      },
+      {
+        "word": "under",
+        "start": 9.668,
+        "end": 10.049
+      },
+      {
+        "word": "local",
+        "start": 10.049,
+        "end": 10.43
+      },
+      {
+        "word": "law.",
+        "start": 10.43,
+        "end": 10.62
+      },
+      {
+        "word": "The",
+        "start": 11.04,
+        "end": 11.308
+      },
+      {
+        "word": "net",
+        "start": 11.308,
+        "end": 11.576
+      },
+      {
+        "word": "present",
+        "start": 11.576,
+        "end": 12.113
+      },
+      {
+        "word": "value",
+        "start": 12.113,
+        "end": 12.381
+      },
+      {
+        "word": "of",
+        "start": 12.381,
+        "end": 12.649
+      },
+      {
+        "word": "a",
+        "start": 12.649,
+        "end": 12.918
+      },
+      {
+        "word": "lease",
+        "start": 12.918,
+        "end": 13.186
+      },
+      {
+        "word": "with",
+        "start": 13.186,
+        "end": 13.454
+      },
+      {
+        "word": "city-specific",
+        "start": 13.454,
+        "end": 14.795
+      },
+      {
+        "word": "tax",
+        "start": 14.795,
+        "end": 15.064
+      },
+      {
+        "word": "treatment.",
+        "start": 15.064,
+        "end": 15.6
+      },
+      {
+        "word": "Operating",
+        "start": 16.02,
+        "end": 16.754
+      },
+      {
+        "word": "expense",
+        "start": 16.754,
+        "end": 17.121
+      },
+      {
+        "word": "reconciliation",
+        "start": 17.121,
+        "end": 18.039
+      },
+      {
+        "word": "across",
+        "start": 18.039,
+        "end": 18.406
+      },
+      {
+        "word": "a",
+        "start": 18.406,
+        "end": 18.589
+      },
+      {
+        "word": "portfolio.",
+        "start": 18.589,
+        "end": 19.14
+      },
+      {
+        "word": "Comparable",
+        "start": 19.56,
+        "end": 20.28
+      },
+      {
+        "word": "selection",
+        "start": 20.28,
+        "end": 21.0
+      },
+      {
+        "word": "in",
+        "start": 21.0,
+        "end": 21.24
+      },
+      {
+        "word": "a",
+        "start": 21.24,
+        "end": 21.48
+      },
+      {
+        "word": "neighborhood",
+        "start": 21.48,
+        "end": 22.2
+      },
+      {
+        "word": "where",
+        "start": 22.2,
+        "end": 22.44
+      },
+      {
+        "word": "a",
+        "start": 22.44,
+        "end": 22.68
+      },
+      {
+        "word": "slope",
+        "start": 22.68,
+        "end": 22.92
+      },
+      {
+        "word": "changes",
+        "start": 22.92,
+        "end": 23.4
+      },
+      {
+        "word": "site",
+        "start": 23.4,
+        "end": 23.64
+      },
+      {
+        "word": "value.",
+        "start": 23.64,
+        "end": 23.88
+      },
+      {
+        "word": "Retrieval",
+        "start": 24.3,
+        "end": 25.032
+      },
+      {
+        "word": "augmented",
+        "start": 25.032,
+        "end": 25.764
+      },
+      {
+        "word": "generation",
+        "start": 25.764,
+        "end": 26.74
+      },
+      {
+        "word": "retrieves",
+        "start": 26.74,
+        "end": 27.472
+      },
+      {
+        "word": "well,",
+        "start": 27.472,
+        "end": 27.716
+      },
+      {
+        "word": "then",
+        "start": 27.716,
+        "end": 27.96
+      },
+      {
+        "word": "infers",
+        "start": 27.96,
+        "end": 28.448
+      },
+      {
+        "word": "the",
+        "start": 28.448,
+        "end": 28.692
+      },
+      {
+        "word": "number.",
+        "start": 28.692,
+        "end": 29.18
+      },
+      {
+        "word": "On",
+        "start": 29.6,
+        "end": 29.827
+      },
+      {
+        "word": "that",
+        "start": 29.827,
+        "end": 30.053
+      },
+      {
+        "word": "arithmetic",
+        "start": 30.053,
+        "end": 30.96
+      },
+      {
+        "word": "it",
+        "start": 30.96,
+        "end": 31.187
+      },
+      {
+        "word": "lands",
+        "start": 31.187,
+        "end": 31.413
+      },
+      {
+        "word": "around",
+        "start": 31.413,
+        "end": 31.867
+      },
+      {
+        "word": "thirty",
+        "start": 31.867,
+        "end": 32.32
+      },
+      {
+        "word": "to",
+        "start": 32.32,
+        "end": 32.547
+      },
+      {
+        "word": "forty",
+        "start": 32.547,
+        "end": 33.0
+      },
+      {
+        "word": "percent",
+        "start": 33.0,
+        "end": 33.453
+      },
+      {
+        "word": "wrong.",
+        "start": 33.453,
+        "end": 33.68
+      },
+      {
+        "word": "Fine",
+        "start": 34.1,
+        "end": 34.38
+      },
+      {
+        "word": "for",
+        "start": 34.38,
+        "end": 34.66
+      },
+      {
+        "word": "summarizing",
+        "start": 34.66,
+        "end": 35.78
+      },
+      {
+        "word": "a",
+        "start": 35.78,
+        "end": 36.06
+      },
+      {
+        "word": "document.",
+        "start": 36.06,
+        "end": 36.9
+      },
+      {
+        "word": "Disqualifying",
+        "start": 37.32,
+        "end": 38.112
+      },
+      {
+        "word": "for",
+        "start": 38.112,
+        "end": 38.31
+      },
+      {
+        "word": "deciding",
+        "start": 38.31,
+        "end": 38.905
+      },
+      {
+        "word": "whether",
+        "start": 38.905,
+        "end": 39.301
+      },
+      {
+        "word": "a",
+        "start": 39.301,
+        "end": 39.499
+      },
+      {
+        "word": "lease",
+        "start": 39.499,
+        "end": 39.697
+      },
+      {
+        "word": "is",
+        "start": 39.697,
+        "end": 39.895
+      },
+      {
+        "word": "worth",
+        "start": 39.895,
+        "end": 40.093
+      },
+      {
+        "word": "two",
+        "start": 40.093,
+        "end": 40.291
+      },
+      {
+        "word": "point",
+        "start": 40.291,
+        "end": 40.49
+      },
+      {
+        "word": "three",
+        "start": 40.49,
+        "end": 40.688
+      },
+      {
+        "word": "million",
+        "start": 40.688,
+        "end": 41.084
+      },
+      {
+        "word": "dollars.",
+        "start": 41.084,
+        "end": 41.48
+      },
+      {
+        "word": "So",
+        "start": 41.9,
+        "end": 42.153
+      },
+      {
+        "word": "teams",
+        "start": 42.153,
+        "end": 42.405
+      },
+      {
+        "word": "refuse",
+        "start": 42.405,
+        "end": 42.911
+      },
+      {
+        "word": "to",
+        "start": 42.911,
+        "end": 43.163
+      },
+      {
+        "word": "automate,",
+        "start": 43.163,
+        "end": 43.921
+      },
+      {
+        "word": "or",
+        "start": 43.921,
+        "end": 44.174
+      },
+      {
+        "word": "carry",
+        "start": 44.174,
+        "end": 44.679
+      },
+      {
+        "word": "risk",
+        "start": 44.679,
+        "end": 44.932
+      },
+      {
+        "word": "nobody",
+        "start": 44.932,
+        "end": 45.689
+      },
+      {
+        "word": "can",
+        "start": 45.689,
+        "end": 45.942
+      },
+      {
+        "word": "quantify.",
+        "start": 45.942,
+        "end": 46.7
+      }
+    ]
+  },
+  {
+    "slide_id": "p3",
+    "duration": 41.32,
+    "word_timings": [
+      {
+        "word": "Problem",
+        "start": 0.18,
+        "end": 0.767
+      },
+      {
+        "word": "three.",
+        "start": 0.767,
+        "end": 1.06
+      },
+      {
+        "word": "Idle",
+        "start": 1.48,
+        "end": 1.725
+      },
+      {
+        "word": "agent",
+        "start": 1.725,
+        "end": 2.215
+      },
+      {
+        "word": "infrastructure",
+        "start": 2.215,
+        "end": 3.195
+      },
+      {
+        "word": "decides",
+        "start": 3.195,
+        "end": 3.93
+      },
+      {
+        "word": "who",
+        "start": 3.93,
+        "end": 4.175
+      },
+      {
+        "word": "gets",
+        "start": 4.175,
+        "end": 4.42
+      },
+      {
+        "word": "automated.",
+        "start": 4.42,
+        "end": 5.4
+      },
+      {
+        "word": "Real",
+        "start": 5.82,
+        "end": 6.083
+      },
+      {
+        "word": "estate",
+        "start": 6.083,
+        "end": 6.609
+      },
+      {
+        "word": "work",
+        "start": 6.609,
+        "end": 6.871
+      },
+      {
+        "word": "is",
+        "start": 6.871,
+        "end": 7.134
+      },
+      {
+        "word": "bursty.",
+        "start": 7.134,
+        "end": 7.66
+      },
+      {
+        "word": "A",
+        "start": 8.08,
+        "end": 8.448
+      },
+      {
+        "word": "lease",
+        "start": 8.448,
+        "end": 8.816
+      },
+      {
+        "word": "arrives.",
+        "start": 8.816,
+        "end": 9.92
+      },
+      {
+        "word": "A",
+        "start": 10.34,
+        "end": 10.553
+      },
+      {
+        "word": "renewal",
+        "start": 10.553,
+        "end": 11.193
+      },
+      {
+        "word": "window",
+        "start": 11.193,
+        "end": 11.62
+      },
+      {
+        "word": "opens",
+        "start": 11.62,
+        "end": 12.047
+      },
+      {
+        "word": "at",
+        "start": 12.047,
+        "end": 12.26
+      },
+      {
+        "word": "sixty",
+        "start": 12.26,
+        "end": 12.687
+      },
+      {
+        "word": "days.",
+        "start": 12.687,
+        "end": 12.9
+      },
+      {
+        "word": "A",
+        "start": 13.32,
+        "end": 13.538
+      },
+      {
+        "word": "lead",
+        "start": 13.538,
+        "end": 13.756
+      },
+      {
+        "word": "writes",
+        "start": 13.756,
+        "end": 14.193
+      },
+      {
+        "word": "in",
+        "start": 14.193,
+        "end": 14.411
+      },
+      {
+        "word": "at",
+        "start": 14.411,
+        "end": 14.629
+      },
+      {
+        "word": "eleven",
+        "start": 14.629,
+        "end": 15.284
+      },
+      {
+        "word": "at",
+        "start": 15.284,
+        "end": 15.502
+      },
+      {
+        "word": "night.",
+        "start": 15.502,
+        "end": 15.72
+      },
+      {
+        "word": "Between",
+        "start": 16.14,
+        "end": 16.638
+      },
+      {
+        "word": "those",
+        "start": 16.638,
+        "end": 16.888
+      },
+      {
+        "word": "moments",
+        "start": 16.888,
+        "end": 17.386
+      },
+      {
+        "word": "the",
+        "start": 17.386,
+        "end": 17.635
+      },
+      {
+        "word": "agent",
+        "start": 17.635,
+        "end": 18.134
+      },
+      {
+        "word": "is",
+        "start": 18.134,
+        "end": 18.383
+      },
+      {
+        "word": "holding",
+        "start": 18.383,
+        "end": 18.882
+      },
+      {
+        "word": "a",
+        "start": 18.882,
+        "end": 19.131
+      },
+      {
+        "word": "warm",
+        "start": 19.131,
+        "end": 19.38
+      },
+      {
+        "word": "process",
+        "start": 19.38,
+        "end": 19.878
+      },
+      {
+        "word": "and",
+        "start": 19.878,
+        "end": 20.128
+      },
+      {
+        "word": "a",
+        "start": 20.128,
+        "end": 20.377
+      },
+      {
+        "word": "loaded",
+        "start": 20.377,
+        "end": 20.875
+      },
+      {
+        "word": "cache",
+        "start": 20.875,
+        "end": 21.125
+      },
+      {
+        "word": "while",
+        "start": 21.125,
+        "end": 21.374
+      },
+      {
+        "word": "producing",
+        "start": 21.374,
+        "end": 22.122
+      },
+      {
+        "word": "nothing.",
+        "start": 22.122,
+        "end": 22.62
+      },
+      {
+        "word": "Always-on",
+        "start": 23.04,
+        "end": 23.769
+      },
+      {
+        "word": "infrastructure",
+        "start": 23.769,
+        "end": 24.74
+      },
+      {
+        "word": "makes",
+        "start": 24.74,
+        "end": 25.226
+      },
+      {
+        "word": "that",
+        "start": 25.226,
+        "end": 25.469
+      },
+      {
+        "word": "cost",
+        "start": 25.469,
+        "end": 25.711
+      },
+      {
+        "word": "permanent,",
+        "start": 25.711,
+        "end": 26.44
+      },
+      {
+        "word": "and",
+        "start": 26.44,
+        "end": 26.683
+      },
+      {
+        "word": "it",
+        "start": 26.683,
+        "end": 26.926
+      },
+      {
+        "word": "only",
+        "start": 26.926,
+        "end": 27.411
+      },
+      {
+        "word": "pencils",
+        "start": 27.411,
+        "end": 27.897
+      },
+      {
+        "word": "out",
+        "start": 27.897,
+        "end": 28.14
+      },
+      {
+        "word": "for",
+        "start": 28.14,
+        "end": 28.383
+      },
+      {
+        "word": "the",
+        "start": 28.383,
+        "end": 28.626
+      },
+      {
+        "word": "very",
+        "start": 28.626,
+        "end": 29.111
+      },
+      {
+        "word": "largest",
+        "start": 29.111,
+        "end": 29.597
+      },
+      {
+        "word": "buyers.",
+        "start": 29.597,
+        "end": 29.84
+      },
+      {
+        "word": "The",
+        "start": 30.26,
+        "end": 30.524
+      },
+      {
+        "word": "mid-market",
+        "start": 30.524,
+        "end": 31.317
+      },
+      {
+        "word": "portfolio",
+        "start": 31.317,
+        "end": 32.11
+      },
+      {
+        "word": "manager",
+        "start": 32.11,
+        "end": 32.903
+      },
+      {
+        "word": "drowning",
+        "start": 32.903,
+        "end": 33.432
+      },
+      {
+        "word": "in",
+        "start": 33.432,
+        "end": 33.697
+      },
+      {
+        "word": "spreadsheets",
+        "start": 33.697,
+        "end": 34.225
+      },
+      {
+        "word": "is",
+        "start": 34.225,
+        "end": 34.49
+      },
+      {
+        "word": "told",
+        "start": 34.49,
+        "end": 34.754
+      },
+      {
+        "word": "this",
+        "start": 34.754,
+        "end": 35.018
+      },
+      {
+        "word": "is",
+        "start": 35.018,
+        "end": 35.283
+      },
+      {
+        "word": "not",
+        "start": 35.283,
+        "end": 35.547
+      },
+      {
+        "word": "for",
+        "start": 35.547,
+        "end": 35.811
+      },
+      {
+        "word": "them",
+        "start": 35.811,
+        "end": 36.076
+      },
+      {
+        "word": "yet.",
+        "start": 36.076,
+        "end": 36.34
+      },
+      {
+        "word": "The",
+        "start": 36.76,
+        "end": 36.98
+      },
+      {
+        "word": "cost",
+        "start": 36.98,
+        "end": 37.2
+      },
+      {
+        "word": "of",
+        "start": 37.2,
+        "end": 37.42
+      },
+      {
+        "word": "waiting",
+        "start": 37.42,
+        "end": 37.86
+      },
+      {
+        "word": "is",
+        "start": 37.86,
+        "end": 38.08
+      },
+      {
+        "word": "why",
+        "start": 38.08,
+        "end": 38.3
+      },
+      {
+        "word": "ninety",
+        "start": 38.3,
+        "end": 38.96
+      },
+      {
+        "word": "percent",
+        "start": 38.96,
+        "end": 39.4
+      },
+      {
+        "word": "of",
+        "start": 39.4,
+        "end": 39.62
+      },
+      {
+        "word": "the",
+        "start": 39.62,
+        "end": 39.84
+      },
+      {
+        "word": "market",
+        "start": 39.84,
+        "end": 40.28
+      },
+      {
+        "word": "is",
+        "start": 40.28,
+        "end": 40.5
+      },
+      {
+        "word": "priced",
+        "start": 40.5,
+        "end": 40.94
+      },
+      {
+        "word": "out.",
+        "start": 40.94,
+        "end": 41.16
+      }
+    ]
+  },
+  {
+    "slide_id": "close",
+    "duration": 20.18,
+    "word_timings": [
+      {
+        "word": "These",
+        "start": 0.18,
+        "end": 0.405
+      },
+      {
+        "word": "are",
+        "start": 0.405,
+        "end": 0.631
+      },
+      {
+        "word": "the",
+        "start": 0.631,
+        "end": 0.856
+      },
+      {
+        "word": "same",
+        "start": 0.856,
+        "end": 1.082
+      },
+      {
+        "word": "problem",
+        "start": 1.082,
+        "end": 1.533
+      },
+      {
+        "word": "in",
+        "start": 1.533,
+        "end": 1.758
+      },
+      {
+        "word": "three",
+        "start": 1.758,
+        "end": 1.984
+      },
+      {
+        "word": "costumes.",
+        "start": 1.984,
+        "end": 2.66
+      },
+      {
+        "word": "The",
+        "start": 3.08,
+        "end": 3.32
+      },
+      {
+        "word": "industry",
+        "start": 3.32,
+        "end": 4.04
+      },
+      {
+        "word": "is",
+        "start": 4.04,
+        "end": 4.28
+      },
+      {
+        "word": "not",
+        "start": 4.28,
+        "end": 4.52
+      },
+      {
+        "word": "short",
+        "start": 4.52,
+        "end": 4.76
+      },
+      {
+        "word": "of",
+        "start": 4.76,
+        "end": 5.0
+      },
+      {
+        "word": "AI",
+        "start": 5.0,
+        "end": 5.24
+      },
+      {
+        "word": "capability.",
+        "start": 5.24,
+        "end": 6.44
+      },
+      {
+        "word": "It",
+        "start": 6.86,
+        "end": 7.071
+      },
+      {
+        "word": "is",
+        "start": 7.071,
+        "end": 7.283
+      },
+      {
+        "word": "short",
+        "start": 7.283,
+        "end": 7.494
+      },
+      {
+        "word": "of",
+        "start": 7.494,
+        "end": 7.706
+      },
+      {
+        "word": "a",
+        "start": 7.706,
+        "end": 7.917
+      },
+      {
+        "word": "foundation",
+        "start": 7.917,
+        "end": 8.551
+      },
+      {
+        "word": "you",
+        "start": 8.551,
+        "end": 8.763
+      },
+      {
+        "word": "can",
+        "start": 8.763,
+        "end": 8.974
+      },
+      {
+        "word": "trust",
+        "start": 8.974,
+        "end": 9.186
+      },
+      {
+        "word": "with",
+        "start": 9.186,
+        "end": 9.397
+      },
+      {
+        "word": "regulated",
+        "start": 9.397,
+        "end": 10.243
+      },
+      {
+        "word": "data,",
+        "start": 10.243,
+        "end": 10.666
+      },
+      {
+        "word": "that",
+        "start": 10.666,
+        "end": 10.877
+      },
+      {
+        "word": "produces",
+        "start": 10.877,
+        "end": 11.511
+      },
+      {
+        "word": "arithmetic",
+        "start": 11.511,
+        "end": 12.357
+      },
+      {
+        "word": "which",
+        "start": 12.357,
+        "end": 12.569
+      },
+      {
+        "word": "survives",
+        "start": 12.569,
+        "end": 13.203
+      },
+      {
+        "word": "scrutiny,",
+        "start": 13.203,
+        "end": 13.837
+      },
+      {
+        "word": "and",
+        "start": 13.837,
+        "end": 14.049
+      },
+      {
+        "word": "that",
+        "start": 14.049,
+        "end": 14.26
+      },
+      {
+        "word": "costs",
+        "start": 14.26,
+        "end": 14.471
+      },
+      {
+        "word": "almost",
+        "start": 14.471,
+        "end": 14.894
+      },
+      {
+        "word": "nothing",
+        "start": 14.894,
+        "end": 15.317
+      },
+      {
+        "word": "at",
+        "start": 15.317,
+        "end": 15.529
+      },
+      {
+        "word": "rest.",
+        "start": 15.529,
+        "end": 15.74
+      },
+      {
+        "word": "Every",
+        "start": 16.16,
+        "end": 16.94
+      },
+      {
+        "word": "tool",
+        "start": 16.94,
+        "end": 17.2
+      },
+      {
+        "word": "today",
+        "start": 17.2,
+        "end": 17.72
+      },
+      {
+        "word": "picks",
+        "start": 17.72,
+        "end": 17.98
+      },
+      {
+        "word": "one.",
+        "start": 17.98,
+        "end": 18.24
+      },
+      {
+        "word": "That",
+        "start": 18.66,
+        "end": 18.854
+      },
+      {
+        "word": "gap",
+        "start": 18.854,
+        "end": 19.049
+      },
+      {
+        "word": "is",
+        "start": 19.049,
+        "end": 19.243
+      },
+      {
+        "word": "the",
+        "start": 19.243,
+        "end": 19.437
+      },
+      {
+        "word": "company.",
+        "start": 19.437,
+        "end": 20.02
+      }
+    ]
+  }
+]

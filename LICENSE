@@ -1,0 +1,17 @@
+Copyright (c) 2026 Mohammed Boukaba. All rights reserved.
+
+This repository is made public so judges, reviewers, and evaluators can read
+the code, verify authorship, and run the project for evaluation.
+
+You may read, clone, inspect, and run this project for evaluation, and quote
+short excerpts with attribution. You may not use it in a product or service,
+modify or redistribute it, use it commercially, or train models on it without
+written permission.
+
+The Realtomatic name, interface, documentation, pitch deck, and demo video are
+copyright (c) 2026 Mohammed Boukaba. All rights reserved.
+
+Third-party libraries retain their own licences. See package.json and
+package-lock.json.
+
+Permissions and enquiries: mohammed@pullrun.dev
